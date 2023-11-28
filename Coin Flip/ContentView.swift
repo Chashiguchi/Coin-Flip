@@ -10,10 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            CustomText(text: "Coin Flip")
         }
         .padding()
     }
@@ -22,5 +19,12 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct CustomText: View {
+    let text: String
+    var body: some View{
+        Text(text).font(Font.custom("Marker Felt", size: 36))
     }
 }
