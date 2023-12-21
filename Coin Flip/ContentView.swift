@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var rotation = 0.0
-    //chooses coin side make sure the coinn isn't flipped
     @State private var coinSide = "Heads"
-    @State private var isFlipped = false
+    @State private var flipped = false
     var body: some View {
         VStack {
             //Logo
@@ -31,7 +30,7 @@ struct ContentView: View {
             Button("Flip Coin") {
                 coinSide = Bool.random() ? "Heads" : "Tails"
                 chooseRandom(times: 2)
-                isFlipped.toggle()
+                flipped.toggle()
             }
             .foregroundColor(.black)
             Spacer()
